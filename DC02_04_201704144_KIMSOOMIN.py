@@ -164,7 +164,7 @@ def speak_linux(byte_stream, frame_rate=44100):
                     output = True)
 
     #volume = 0.5
-    duration = 0.5
+    duration = 0.4
     for i in range(len(freq)): 
         samples = (np.sin(2*np.pi*np.arange(frame_rate*duration)*(freq[i]/frame_rate))).astype(np.float32)
         stream.write(samples)
