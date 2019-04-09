@@ -143,7 +143,7 @@ def byte_to_bits(byte_stream):
 
         # need to twice???
     #print(len(bit_stream))
-    print(bit_stream)
+    #print(bit_stream)
     return bit_stream
      
 
@@ -164,10 +164,12 @@ def speak_linux(byte_stream, frame_rate=44100):
                     output = True)
 
     #volume = 0.5
-    duration = 0.4
+    duration = 0.5
     for i in range(len(freq)): 
         samples = (np.sin(2*np.pi*np.arange(frame_rate*duration)*(freq[i]/frame_rate))).astype(np.float32)
         stream.write(samples)
+        #print("arange: " + str(np.arange(frame_rate*duration)*(freq[i]/frame_rate)))
+        print(samples)
         print("freq : " + str(freq[i]))
         
     #print(samples)
