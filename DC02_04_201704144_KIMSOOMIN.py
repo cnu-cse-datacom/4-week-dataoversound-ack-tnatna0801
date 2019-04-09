@@ -169,7 +169,6 @@ def speak_linux(byte_stream, frame_rate=44100):
         samples = (np.sin(2*np.pi*np.arange(frame_rate*duration)*(freq[i]/frame_rate))).astype(np.float32)
         stream.write(samples)
         #print("arange: " + str(np.arange(frame_rate*duration)*(freq[i]/frame_rate)))
-        print(samples)
         print("freq : " + str(freq[i]))
         
     #print(samples)
